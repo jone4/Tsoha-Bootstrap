@@ -1,0 +1,34 @@
+{% extends "base.html" %} 
+{% block content %} 
+<h1>Mahdolliset uudet ystävät</h1> 
+<p> 
+    <a href="#" class="btn btn-success"> Lisää ystävä</a> 
+</p> 
+<table class="table table-striped table-bordered"> 
+    <thead> 
+        <tr> 
+            <th> Nimi</th> 
+            <th>Julkaistu  </th> 
+            <th>Toiminnassa</th> 
+            <th></th> 
+        </tr> 
+    </thead> 
+    <tbody> 
+        <!-- Listataan pelit tähän --> 
+        <tr> 
+            <td><a href="#">Aatu Mikkonen</a></td>
+            <td>12.12.2016</td> 
+            <td><label class="label label-danger">kesken</label></td> 
+            <th><a class="btn btn-default btn-sm" href="#">Muokkaa</a></th> 
+        </tr> 
+         
+        <tr> 
+            <td><a href="#">Ella Kokkola</a></td>
+            <td>12.05.2017</td> 
+            <td><label class="label label-danger">kesken</label></td> 
+            <th><a class="btn btn-default btn-sm" href="#">Muokkaa</a></th> 
+        </tr> 
+        
+    </tbody> 
+</table> 
+{% endblock %} 
