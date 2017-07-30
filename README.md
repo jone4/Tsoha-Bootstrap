@@ -3,7 +3,7 @@
 Yleisiä linkkejä:
 
 * [Linkki sovellukseeni](http://jmtuhkan.users.cs.helsinki.fi/uusiystavanvalitys/)
-* [Linkki dokumentaatiooni](https://github.com/jone4/Tsoha-Bootstrap/tree/master/doc)
+* [Linkki dokumentaatiooni](https://github.com/jone4/Tsoha-Bootstrap/blob/master/doc/Dokumentaatio.pdf)
 
 ## Työn aihe
 
