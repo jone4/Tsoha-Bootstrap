@@ -15,3 +15,7 @@
   $routes-> get ("/people/aatumikkonen", function(){
       HelloWorldController::person_show();
   });
+  
+    $routes-> get ("/muokkaa", function(){
+      HelloWorldController::muokkaa_profiilitietojani();
+  });

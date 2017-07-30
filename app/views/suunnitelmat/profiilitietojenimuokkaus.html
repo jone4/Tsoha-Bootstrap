@@ -1,0 +1,27 @@
+
+
+{% extends "base.html" %}
+{% block content %}
+  <h1>Muokkaa omia profiilitietojasi</h1>
+
+  <form>
+    
+    <div class="form-group">
+      <label>Nimi</label>
+      <input class="form-control" value="Aatu Mikkonen" type="text">
+    </div>
+    <div class="form-group">
+      <label>Toiminnassa</label>
+      <input class="form-control" value="Kesken" type="text">
+    </div>
+    <div class="form-group">
+      <label>Kuvaus</label>
+      <input class="form-control" value="Moikka, oon eläkeläinen ja etsin kavereita tekemään ristisanoja kanssani. " type="text">
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Tallenna</button>
+    </div>
+  </form>
+{% endblock %}
+
+

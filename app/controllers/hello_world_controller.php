@@ -19,5 +19,9 @@
 public static function person_show(){
     View::make ("suunnitelmat/esittelysivu.html");
 }
+public static function muokkaa_profiilitietojani(){
+    View::make ("suunnitelmat/profiilitietojenimuokkaus.html");
+}
+   
     
     }
