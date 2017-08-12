@@ -1,0 +1,25 @@
+
+
+{% extends "base.html" %}
+{% block content %}
+  <h1>Muokkaa omia profiilitietojasi</h1>
+
+  <form method="get" action="{{base_path}}/muokkaa/{{ystavanetsija.id}}">
+      <div class="form-group">
+        <label>Nimi</label>
+        <input name="nimi" class="form-control" value="{{ystavanetsija.nimi}}" type="text">    
+    </div>
+       <div class="form-group">
+          
+           <label>Kesken</label>
+           <input name="status" class="form-control" value="{{ystavanetsija.status}}" type="text">
+      
+      <div class="form-group">
+       <label>Kuvaus</label>
+        <input name="kuvaus" class="form-control" value="{{ystavanetsija.kuvaus}}" type="text">
+    </div>    
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Tallenna</button>
+    </div>
+</form>
+{% endblock %}

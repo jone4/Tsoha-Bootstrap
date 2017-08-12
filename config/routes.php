@@ -25,6 +25,10 @@
   });
   
   
-    $routes-> get ("/muokkaa", function(){
-      HelloWorldController::muokkaa_profiilitietojani();
+    //$routes-> get ("/muokkaa", function(){
+      //HelloWorldController::muokkaa_profiilitietojani();
+  //});
+  
+   $routes-> get ("/muokkaa/:id", function($id){
+       ProfiilitietojeniMuokkausController::show($id);
   });
