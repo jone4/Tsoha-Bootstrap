@@ -1,0 +1,33 @@
+{% extends "base.html" %} 
+{% block content %} 
+<h1>Mahdolliset uudet ystävät</h1> 
+<p> 
+    <a href="{{base_path}}/uusi" class="btn btn-success"> Lisää ystävä</a> 
+</p> 
+<table class="table table-striped table-bordered"> 
+    <thead> 
+        <tr> 
+            <th> Nimi</th> 
+            <th>Julkaistu  </th> 
+            <th>Toiminnassa</th> 
+            <th></th> 
+        </tr> 
+    </thead> 
+    <tbody> 
+        <!-- Listataan pelit tähän --> 
+        {% for ystavanetsija in ystavanetsijat %}
+        <tr> 
+            <td><a href="{{base_path}}/people/{{ystavanetsija.id}}">{{ystavanetsija.nimi}}</a></td>
+            <td>{{ystavanetsija.julkaistu}}</td> 
+            
+            <td><label class="label label-danger">{{ystavanetsija.status}}</label></td> 
+            
+            <td><a class="btn btn-default btn-sm" href="{{base_path}}/people/{{ystavanetsija.id}}/muokkaa">Muokkaa</a></td> 
+        </tr> 
+         {% endfor %}
+        <tr> 
+            
+        
+    </tbody> 
+</table> 
+{% endblock %} 

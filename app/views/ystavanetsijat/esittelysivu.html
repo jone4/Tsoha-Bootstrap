@@ -1,0 +1,24 @@
+{% extends "base.html" %} 
+{% block content %} 
+<h1>{{ystavanetsija.nimi}} </h1>
+
+<!-- Painikkeet tähän --> 
+<p> 
+    <a href= "{{base_path}}/poista" class="btn btn-danger">Poista</a> 
+    <a href="{{base_path}}/muokkaa" class="btn btn-default">Muokkaa</a> 
+</p>
+
+  <form method="get" action="{{base_path}}/{{ystavanetsija.id}}/">
+      
+    <ul> <li><strong>Julkaistu:</strong> {{ystavanetsija.julkaistu}}</li> 
+    <li><strong>Toiminnassa:</strong> <label class="label label-danger">{{ystavanetsija.status}}</label></li>
+</ul> 
+
+      <p>{{ystavanetsija.kuvaus}}</p>
+  
+  </form>
+
+
+
+
+{% endblock %} 
