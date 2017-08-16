@@ -13,10 +13,17 @@ Uusi käyttäjä?
 
 
 <h2> Kirjaudu sisään </h2>
-<input class="form-control" placeholder="Käyttäjätunnus" type="text">
-<input class="form-control" placeholder="Salasana" type="text">
-<br> 
+<form method="post" action="{{base_path}}/">
+<div class="form-group">
+    <input class="form-control" placeholder="Käyttäjätunnus" name="nimi" value="{{nimi}}" type="text">
+</div>
+    
+    <div class="form-group">
+    <input class="form-control" placeholder="Salasana" name="password" type="password">
+    </div>
+    
+ <br> 
 <button class="btn btn-primary">Kirjaudu sisään</button> 
 </br>
-
+</form>
 {% endblock %} 

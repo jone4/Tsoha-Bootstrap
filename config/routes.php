@@ -5,7 +5,11 @@
   //});
 
 $routes-> get('/', function(){
-EtusivuContoller::index();
+    KayttajaController::kirjaudu();
+});
+
+$routes-> post('/', function(){
+    KayttajaController::kasittele_kirjaudu();
 });
 
   $routes->get('/hiekkalaatikko', function() {
