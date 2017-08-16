@@ -4,7 +4,7 @@
 {% block content %}
   <h1>Muokkaa omia profiilitietojasi</h1>
 
-  <form method="get" action="{{base_path}}/muokkaa/{{ystavanetsija.id}}">
+  <form method="get" action="{{base_path}}/people/{{ystavanetsija.id}}/muokkaa">
       <div class="form-group">
         <label>Nimi</label>
         <input name="nimi" class="form-control" value="{{ystavanetsija.nimi}}" type="text">    
@@ -21,5 +21,9 @@
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Tallenna</button>
     </div>
+</form>
+  
+  <form method="post" action="{{base_path}}/people/{{ystavanetsija.id}}/muokkaa" style="display: inline-block;">
+  <button type="submit" class="btn btn-danger">Poista</button>
 </form>
 {% endblock %}

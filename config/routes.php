@@ -37,6 +37,19 @@ $routes-> post('/', function(){
       //HelloWorldController::muokkaa_profiilitietojani();
   //});
   
-   $routes-> get ("/muokkaa/:id", function($id){
-       ProfiilitietojeniMuokkausController::show($id);
+  //turha?
+  // $routes-> get ("/muokkaa/:id", function($id){
+       //ProfiilitietojeniMuokkausController::show($id);
+  //});
+  
+  $routes-> get('/people/:id/muokkaa', function($id){
+  YstavanetsijaController::muokkaa($id);   
+  });
+  
+  $routes-> post ('/people/:id/muokkaa', function($id){
+      YstavanetsijaController::paivita($id);}
+  );
+  
+  $routes-> post('people/:id/muokkaa', function($id){
+  YstavanetsijaController::tuhoa($id);
   });

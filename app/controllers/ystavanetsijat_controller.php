@@ -18,6 +18,42 @@ class YstavanetsijaController extends BaseController{
        $ystavanetsija = Ystavanetsija::etsi($id);
       View::make('ystavanetsijat/esittelysivu.html', array('ystavanetsija'=> $ystavanetsija)); 
     }
+  
+    public static function muokkaa($id){
+    $ystavanetsija = Ystavanetsija::etsi($id);
+    View::make('ystavanetsijat/profiilitietojenimuokkaus.html', array('attributes' => $ystavanetsija));
+  }
+     public static function paivita($id){
+    $params = $_POST;
+
+    $attributes = array(
+      'id' => $id,
+      'nimi' => $params['nimi'],
+      'julkaistu' => $params['julkaistu'],
+      'status' => $params['status'],
+      'kuvaus' => $params['kuvaus']
+    );
+    
+    $ystavanetsija = new Ystavanetsija($attributes);
+    $errors = $ystavanetsija->errors();
+
+    if(count($errors) > 0){
+      View::make('ystavanetsijat/profiilitietojenimuokkaus.html', array('errors' => $errors, 'attributes' => $attributes));
+    }else{
+      $ystavanetsija->paivita();
+
+      Redirect::to('/people/' . $game->id, array('message' => 'Ystävänetsijää on muokattu onnistuneesti!'));
     }
+  }
+    
+  public static function tuhoa($id){
+    $ystavanetsija = new Ystavanetsija(array('id' => $id));
+    $ystavanetsija->tuhoa();
+
+    Redirect::to('/people', array('message' => 'Peli on poistettu onnistuneesti!'));
+  }
+  
+  
+     }
     
    
