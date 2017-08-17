@@ -50,7 +50,7 @@ class YstavanetsijaController extends BaseController{
     $ystavanetsija = new Ystavanetsija(array('id' => $id));
     $ystavanetsija->tuhoa();
 
-    Redirect::to('/people', array('message' => 'Peli on poistettu onnistuneesti!'));
+    Redirect::to('/people', array('message' => 'Ystavanetsija on poistettu onnistuneesti!'));
   }
   
   
